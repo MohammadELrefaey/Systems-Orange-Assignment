@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Systems_Orange_Assignment_Systems_Orange_AssignmentUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Systems_Orange_Assignment_Systems_Orange_AssignmentUITests
+@end
