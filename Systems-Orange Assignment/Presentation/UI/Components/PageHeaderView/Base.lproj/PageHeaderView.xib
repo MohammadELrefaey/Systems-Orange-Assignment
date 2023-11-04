@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageHeaderView" customModule="Systems_Orange_Assignment" customModuleProvider="target">
+            <connections>
+                <outlet property="backBtn" destination="2A3-jy-hgZ" id="1G9-b6-Czw"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="kx6-3M-DlD"/>
+                <outlet property="titleLbl" destination="Pia-Kv-bq8" id="d9b-Um-45Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uk-dv-vsc">
+                    <rect key="frame" x="0.0" y="0.0" width="436" height="95"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pia-Kv-bq8">
+                            <rect key="frame" x="168" y="39" width="100.5" height="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2A3-jy-hgZ">
+                            <rect key="frame" x="20" y="0.0" width="20" height="95"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="cyt-3P-YNc"/>
+                            </constraints>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="black"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="2A3-jy-hgZ" secondAttribute="bottom" id="1Ze-Tc-5zR"/>
+                        <constraint firstItem="Pia-Kv-bq8" firstAttribute="centerX" secondItem="3uk-dv-vsc" secondAttribute="centerX" id="Xfm-WM-cZA"/>
+                        <constraint firstItem="2A3-jy-hgZ" firstAttribute="top" secondItem="3uk-dv-vsc" secondAttribute="top" id="acZ-iQ-BfP"/>
+                        <constraint firstItem="2A3-jy-hgZ" firstAttribute="leading" secondItem="3uk-dv-vsc" secondAttribute="leading" constant="20" id="ge7-2Z-tJH"/>
+                        <constraint firstItem="Pia-Kv-bq8" firstAttribute="centerY" secondItem="3uk-dv-vsc" secondAttribute="centerY" id="vua-p3-KDe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3uk-dv-vsc" secondAttribute="bottom" id="CWu-R0-p3q"/>
+                <constraint firstItem="3uk-dv-vsc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MKk-ge-EwX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3uk-dv-vsc" secondAttribute="trailing" id="or4-mH-Q95"/>
+                <constraint firstItem="3uk-dv-vsc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="wzK-Q8-OYp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="159.375" y="-361.79577464788736"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+    </resources>
+</document>

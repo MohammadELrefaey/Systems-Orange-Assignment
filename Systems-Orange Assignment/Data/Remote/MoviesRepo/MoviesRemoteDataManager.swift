@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class MoviesRemoteDataManager: MoviesRemoteRepo {
+    func fetchMovies() {
+        //
+    }
+    
+    
+    
+}
