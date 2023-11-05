@@ -11,5 +11,4 @@ struct URLs {
     
     static let baseUrl = ApiConstants.serverURL
     static let photos = baseUrl
-    
 }

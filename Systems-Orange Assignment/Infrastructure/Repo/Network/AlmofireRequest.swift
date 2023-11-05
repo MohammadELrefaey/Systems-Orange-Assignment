@@ -1,9 +1,8 @@
 //
 //  APIRequest.swift
-//  NetworkInfra
+//  Systems-Orange Assignment
 //
-//  Created by Mahmoud on 1/31/20.
-//  Copyright © 2020 Mahmoud. All rights reserved.
+//  Created by Refaey on 03/11/2023.
 //
 
 import Foundation
@@ -22,7 +21,7 @@ class AlmofireRequest<T: Encodable> {
     init(method: HttpMethod = .get, path: String = "", header: [String: Any]? = nil, value: T) {
         self.method = method
         self.path = path
-        self.header = header ?? ["Content-Type": "application/json", "Authorization": ServerHelper.getToken(), "langue": AppData.shared.currentLanguage ]
+        self.header = header
         self.value = value
     }
     
@@ -87,8 +86,7 @@ extension AlmofireRequest {
                 return HTTPMethod.patch.rawValue
             case .put:
                 return HTTPMethod.put.rawValue
-            default:
-                return HTTPMethod.get.rawValue
+
             }
       }
     

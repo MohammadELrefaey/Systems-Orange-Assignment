@@ -1,9 +1,8 @@
 //
 //  DictinaryPathValue.swift
-//  Majdona
+//  Systems-Orange Assignment
 //
-//  Created by Mahmoud on 4/30/20.
-//  Copyright © 2020 Mahmoud. All rights reserved.
+//  Created by Refaey on 03/11/2023.
 //
 
 import Foundation

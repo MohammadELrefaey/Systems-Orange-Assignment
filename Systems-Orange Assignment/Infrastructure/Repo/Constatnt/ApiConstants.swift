@@ -18,6 +18,7 @@ class ApiConstants {
     }
     
     static var apiKey: String {
+        //check environments
         get {
             return "6e371fae2e07a80a08a3730f886004d3"
         }

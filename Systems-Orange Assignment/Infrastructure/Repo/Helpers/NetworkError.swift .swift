@@ -1,9 +1,8 @@
 //
 //  NetworkError.swift
-//  NetworkInfra
+//  Systems-Orange Assignment
 //
-//  Created by Mahmoud on 1/31/20.
-//  Copyright © 2020 Mahmoud. All rights reserved.
+//  Created by Refaey on 03/11/2023.
 //
 
 import Foundation
@@ -21,13 +20,13 @@ enum NetworkError: Error, LocalizedError {
     var errorDescription: String? {
         switch self {
         case .noInternetConnection:
-            return "No internet connection".localized
+            return "No internet connection"
         case .invalidData, .internalServerError:
-            return "Something went wrong".localized
+            return "Something went wrong"
         case .unknownError(let error):
             return error
         case .unauthorized:
-            return "Unauthorized".localized
+            return "Unauthorized"
         default:
             return ""
         }

@@ -1,9 +1,8 @@
 //
 //  EmptyRequest.swift
-//  NetworkInfra
+//  Systems-Orange Assignment
 //
-//  Created by Mahmoud on 2/1/20.
-//  Copyright © 2020 Mahmoud. All rights reserved.
+//  Created by Refaey on 03/11/2023.
 //
 
 import Foundation
