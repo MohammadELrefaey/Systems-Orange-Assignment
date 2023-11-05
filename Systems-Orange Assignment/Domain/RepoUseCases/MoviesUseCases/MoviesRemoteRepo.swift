@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MoviesRemoteRepo {
-    func fetchMovies()
+    func fetchPhotos(request: MoviesInOut.GetPhotos.Request?, response: ((MoviesInOut.GetPhotos.Response?)->())?)
 }

@@ -8,11 +8,12 @@
 import Foundation
 
 struct MoviesInOut {
+    //this is absrtacion struct to declare the requests and response will used by useCases
     
+    
+    //MARK: - Get Movies
     struct GetMovies {
         struct Request {
-            var page: Int?
-            var limitPerPage: Int?
             var query: String?
         }
         
@@ -21,4 +22,19 @@ struct MoviesInOut {
             var error: RError?
         }
     }
+    
+    //MARK: - Get Photos
+    struct GetPhotos {
+        struct Request {
+            var query: String?
+            var page: Int?
+            var perPage: Int?
+        }
+        
+        struct Response {
+            var list: [MoviePhotoModel]?
+            var error: RError?
+        }
+    }
+
 }

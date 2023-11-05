@@ -14,13 +14,8 @@ class MoviesListPresenter:BasePresenter, MoviesListPresenterProtocol, MoviesList
     private let interactor: MoviesListInteractorInputProtocol
     private var router: MoviesListRouterProtocol
     
-    var page: Int = 1
-    var getLimit: Bool = false
-    var moviesCategories: [MoviesCategory] = [MoviesCategory]() {
-        didSet {
-            self.prepareCategoriesForView()
-        }
-    }
+    var isSearchMode: Bool = false
+    var moviesCategories: [MoviesCategory] = [MoviesCategory]()
 
     //MARK: - Initializers
     init(view: MoviesListViewProtocol, interactor: MoviesListInteractorInputProtocol, router: MoviesListRouterProtocol) {
@@ -31,13 +26,22 @@ class MoviesListPresenter:BasePresenter, MoviesListPresenterProtocol, MoviesList
     
     //MARK: - Interactor Output Protocol
     func fetchedSuccessfuly(data: [MovieModel]?) {
+
         if let data = data {
-            categorizeMovies(movies: data, completion: { [weak self] categories in
-                guard let self = self else {return}
+            if isSearchMode {
+                categorizeMovies(movies: data, completion: { [weak self] categories in
+                    guard let self = self else {return}
+                    self.moviesCategories = categories
+                    self.prepareCategoriesForView()
+                    self.view?.finishLoading()
+                    self.view?.success()
+                })
+            } else {
+                let category = MoviesCategory(movies: data)
+                self.moviesCategories = [category]
                 self.view?.finishLoading()
-                self.moviesCategories = categories
                 self.view?.success()
-            })
+            }
         } else {
             view?.finishLoading()
             view?.emptyDataFound()
@@ -62,11 +66,17 @@ class MoviesListPresenter:BasePresenter, MoviesListPresenterProtocol, MoviesList
     
     //MARK: - Presenter Protocol
     func fetchMovies(query: String?) {
+        isSearchMode = (query != nil && query != "")
+
         view?.startLoading()
-        interactor.fetchMovies(page: page, query: query, limit: 20)
+        interactor.fetchMovies(query: query)
     }
     
-    
+    func goToDetails(index: IndexPath) {
+        let movie = moviesCategories[index.section].movies?[index.row]
+        router.goToDetails(from: view, movie: movie)
+    }
+
     //MARK: - Private Methods
     private func categorizeMovies(movies: [MovieModel], completion: @escaping ([MoviesCategory]) -> Void ) {
         

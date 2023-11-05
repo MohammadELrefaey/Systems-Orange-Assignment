@@ -10,10 +10,25 @@ import UIKit
 
 class PageHeaderView: UIView {
     
-    var hideBack = true
-    var onBackPressed: (()->())?
-    var titleText: String?
+    var hideBack = false {
+        didSet {
+            backBtn.isHidden = hideBack
+        }
+    }
     
+    var title: String? {
+        didSet {
+            if let title = title {
+                titleLbl.text = title
+                self.titleLbl.isHidden = false
+            } else {
+                self.titleLbl.isHidden = true
+            }
+        }
+    }
+    
+    var onBackPressed: (()->())?
+
     //outlets
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var backBtn: UIButton!
@@ -40,12 +55,10 @@ class PageHeaderView: UIView {
     }
     
     func setupUI() {
-        titleLbl.text = titleText
-        backBtn.isHidden = hideBack
+        titleLbl.isHidden = true
         backBtn.addTapGestureRecognizer {[weak self] in
             guard let self = self else {return}
             self.onBackPressed?()
         }
-        
     }
 }

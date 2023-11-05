@@ -54,13 +54,11 @@ class CustomTextField: UIView {
     //MARK: - Methods
     func setupUI () {
         self.lblPlaceHolder.isHidden = true
-        self.vuContain.backgroundColor = UIColor.white
+        self.vuContain.backgroundColor = UIColor.systemGray5
         self.image = nil
-        self.errorMessage = ""
         textField.addTarget(self, action: #selector(didbeginWrite), for: .editingDidBegin)
         textField.addTarget(self, action: #selector(didendWrite), for: .editingDidEnd)
         textField.addTarget(self, action: #selector(didclickedPrimaryKey), for: .primaryActionTriggered)
-        self.isSecure = false
         self.textField.returnKeyType = .done
         self.backgroundColor = UIColor.clear
     }
@@ -112,41 +110,6 @@ class CustomTextField: UIView {
         }
     }
     
-    var isSecure: Bool? {
-        didSet {
-            self.textField.isSecureTextEntry = isSecure ?? false
-        }
-    }
-    
-    var errorMessage : String? {
-        didSet {
-            if (self.errorMessage ?? "") == "" {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-//                    self.lblPlaceHolder.isHidden = true
-                    self.lblPlaceHolder.text = self.placeHolder
-                    self.lblPlaceHolder.textColor = .gray
-                    self.layoutIfNeeded()
-                    if self.textField.text == "" {
-                        self.lblPlaceHolder.alpha = 0
-                    }else{
-                        self.lblPlaceHolder.alpha = 1
-                    }
-                    self.textField.textColor = .black
-                    self.vuContain.layer.borderColor = UIColor.clear.cgColor
-                })
-            }else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05, execute: {
-                    self.lblPlaceHolder.isHidden = false
-                    self.lblPlaceHolder.text = self.errorMessage
-                    self.lblPlaceHolder.textColor = UIColor.red
-                    self.vuContain.layer.borderColor = UIColor.red.cgColor
-                    self.layoutIfNeeded()
-                    self.textField.textColor = UIColor.red
-                    self.fadelblPlaceHolder(1)
-                })
-            }
-        }
-    }
 }
 
 // animation
@@ -170,10 +133,9 @@ extension CustomTextField {
     }
     
     @objc func didendWrite() {
-        if (self.errorMessage ?? "" ) == "" && self.textField.text == "" {
+        if self.textField.text == "" {
             fadelblPlaceHolder(0)
         }
-        errorMessage = nil
         didEndEdit?()
     }
     

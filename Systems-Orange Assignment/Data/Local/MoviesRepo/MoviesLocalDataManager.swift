@@ -15,8 +15,11 @@ class MoviesLocalDataManager: MoviesLocalRepo {
         
         getObjectsFromFile(filePath: "movies") { (objects: MoviesListModel?, error: Error?) in
             if let parsedObject = objects  {
-                let movies = parsedObject.movies?.filter({$0.title?.contains(request?.query ?? "") ?? false})
-                responseModel.list = movies
+                if let query = request?.query?.lowercased(), query != "" {
+                    responseModel.list = parsedObject.movies?.filter({$0.title?.lowercased().contains(query) ?? false})
+                } else {
+                    responseModel.list = parsedObject.movies
+                }
             } else if let err = error as? NetworkError {
                 responseModel.error = RError.init()
                 responseModel.error?.desc = err.errorDescription

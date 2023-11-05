@@ -22,5 +22,12 @@ class MoviesListRouter: MoviesListRouterProtocol {
         view.presenter = presenter
         return view
     }
+    
+    func goToDetails(from view: MoviesListViewProtocol?, movie: MovieModel?) {
+        let detailsView = MovieDetailsRouter.createModule(movie: movie)
+        detailsView.modalTransitionStyle = .coverVertical
+        detailsView.modalPresentationStyle = .fullScreen
+        view?.present(detailsView, animated: true)
+    }
 
 }

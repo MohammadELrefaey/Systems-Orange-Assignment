@@ -21,7 +21,7 @@ class MoviesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        presenter.fetchMovies(query: "")
+        presenter.fetchMovies(query: nil)
     }
 
     //MARK: - Private Methods
@@ -37,7 +37,7 @@ class MoviesListViewController: UIViewController {
     }
     
     private func setupHeader() {
-        headerView.titleText = "Decade Of Movies"
+        headerView.title = "Decade Of Movies"
         headerView.hideBack = true
     }
     
@@ -46,9 +46,9 @@ class MoviesListViewController: UIViewController {
         searchBar.image = UIImage(systemName: "magnifyingglass")
         searchBar.placeHolder = "Search Here"
         searchBar.onChangeText = { [weak self] text in
-            guard let slef = self else {return}
+            guard let self = self else {return}
             print(text)
-            self?.presenter.fetchMovies(query: text)
+            self.presenter.fetchMovies(query: text)
         }
     }
 }
@@ -65,7 +65,15 @@ extension MoviesListViewController: MoviesListViewProtocol{
     }
     
     func success() {
-        moviesTable.reloadData()
+        self.moviesTable.reloadData()
+    }
+    
+    func showError(message: String?) {
+        AppAlert.showError(message: message ?? "")
+    }
+    
+    func emptyDataFound() {
+        //To Do
     }
 }
 
@@ -74,7 +82,11 @@ extension MoviesListViewController: MoviesListViewProtocol{
 extension MoviesListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return presenter.moviesCategories.count
+        if presenter.isSearchMode {
+            return presenter.moviesCategories.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,8 +101,12 @@ extension MoviesListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let model = presenter.moviesCategories[section]
-        return "Movies of \(model.year ?? 0)"
+        if presenter.isSearchMode {
+            let model = presenter.moviesCategories[section]
+            return "Movies of \(model.year ?? 0)"
+        } else {
+            return nil
+        }
     }
 
     
@@ -98,19 +114,7 @@ extension MoviesListViewController: UITableViewDelegate, UITableViewDataSource {
         return 50
     }
     
-}
-
-extension Dictionary {
-    subscript(index: Int) -> Element {
-        let keyValueArray = Array(self)
-
-        // Access the value at a specific index
-        return keyValueArray[index]
-//        if let v {
-//            print("Value at index \(index): \(value)")
-//        } else {
-//            print("Invalid index")
-//        }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.goToDetails(index: indexPath)
     }
 }

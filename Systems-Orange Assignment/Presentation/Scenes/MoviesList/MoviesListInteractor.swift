@@ -11,18 +11,17 @@ class MoviesListInteractor: MoviesListInteractorInputProtocol {
     
     //MARK: - Properties
     var localDataManager: MoviesLocalRepo
-    var remoteDataManager: MoviesRemoteRepo
     weak var presenter: MoviesListInteractorOutputProtocol?
     
     //MARK: - Initializers
     init(localDataManager: MoviesLocalRepo, remoteDataManager: MoviesRemoteRepo) {
         self.localDataManager = localDataManager
-        self.remoteDataManager = remoteDataManager
     }
     
     //MARK: - Interactor Input Protocol Methods
-    func fetchMovies(page: Int, query: String?, limit: Int) {
-        let request = MoviesInOut.GetMovies.Request(page: page, limitPerPage: limit, query: query)
+    
+    func fetchMovies(query: String?) {
+        let request = MoviesInOut.GetMovies.Request(query: query)
         localDataManager.fetchMovies(request: request) { response in
             if let error = response?.error {
                 self.presenter?.fetchingFailed(withError: error)
