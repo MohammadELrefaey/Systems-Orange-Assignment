@@ -38,7 +38,8 @@ struct MovieModel : Codable {
 		case genres = "genres"
 		case rating = "rating"
 	}
-
+    
+    
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		title = try values.decodeIfPresent(String.self, forKey: .title)

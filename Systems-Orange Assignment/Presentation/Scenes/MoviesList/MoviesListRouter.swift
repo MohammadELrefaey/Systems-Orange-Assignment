@@ -15,7 +15,7 @@ class MoviesListRouter: MoviesListRouterProtocol {
     
     static func createModule() -> MoviesListViewController {
         let view = storyboard.instantiateViewController(withIdentifier: "\(MoviesListViewController.self)") as! MoviesListViewController
-        let interactor = MoviesListInteractor(localDataManager: MoviesLocalDataManager(), remoteDataManager: MoviesRemoteDataManager())
+        let interactor = MoviesListInteractor(localDataManager: MoviesLocalDataManager())
         let router = MoviesListRouter()
         let presenter = MoviesListPresenter(view: view, interactor: interactor, router: router)
         interactor.presenter = presenter
@@ -27,7 +27,9 @@ class MoviesListRouter: MoviesListRouterProtocol {
         let detailsView = MovieDetailsRouter.createModule(movie: movie)
         detailsView.modalTransitionStyle = .coverVertical
         detailsView.modalPresentationStyle = .fullScreen
-        view?.present(detailsView, animated: true)
+        if let view = view as? UIViewController {
+            view.present(detailsView, animated: true)
+        }
     }
 
 }

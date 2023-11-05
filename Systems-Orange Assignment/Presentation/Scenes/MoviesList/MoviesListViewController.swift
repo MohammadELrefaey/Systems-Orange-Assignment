@@ -73,7 +73,7 @@ extension MoviesListViewController: MoviesListViewProtocol{
     }
     
     func emptyDataFound() {
-        //To Do
+        AppAlert.showError(message: "No Data Found")
     }
 }
 
@@ -82,11 +82,7 @@ extension MoviesListViewController: MoviesListViewProtocol{
 extension MoviesListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if presenter.isSearchMode {
-            return presenter.moviesCategories.count
-        } else {
-            return 1
-        }
+        return presenter.moviesCategories.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

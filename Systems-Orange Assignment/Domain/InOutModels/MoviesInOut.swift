@@ -8,7 +8,7 @@
 import Foundation
 
 struct MoviesInOut {
-    //this is absrtacion struct to declare the requests and response will used by useCases
+    //this is absrtacion struct to declare the requests and response will used by useCases/interactors
     
     
     //MARK: - Get Movies

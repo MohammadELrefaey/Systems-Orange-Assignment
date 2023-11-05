@@ -115,13 +115,12 @@ class AlertClass2 {
         SwiftMessages.hide()
         let info = MessageView.viewFromNib(layout: .cardView)
         info.configureTheme(.info)
-        let color = UIColor.red.withAlphaComponent(0.2)
-        info.configureTheme(backgroundColor: color, foregroundColor: .red)
+        info.configureTheme(backgroundColor: .red, foregroundColor: .white)
         info.button?.isHidden = true
         //info.iconImageView?.isHidden = true
     //        info.configureDropShadow()
         info.sizeToFit()
-        info.configureContent(title: title, body: message,iconImage: UIImage.init(named: "Error")!)
+        info.configureContent(title: title, body: message,iconImage: UIImage())
         info.alpha = 1
         // let infoTap = UITapGestureRecognizer(target: self, action: #selector(DoneClicked))
         if infoTap != nil{

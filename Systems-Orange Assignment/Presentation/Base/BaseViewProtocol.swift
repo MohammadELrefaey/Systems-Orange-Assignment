@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol BaseViewProtocol: AnyObject, UIViewController {
+protocol BaseViewProtocol: AnyObject {
     
     func startLoading()
     func finishLoading()

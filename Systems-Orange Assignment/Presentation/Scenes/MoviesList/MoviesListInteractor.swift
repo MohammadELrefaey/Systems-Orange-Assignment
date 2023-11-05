@@ -14,7 +14,7 @@ class MoviesListInteractor: MoviesListInteractorInputProtocol {
     weak var presenter: MoviesListInteractorOutputProtocol?
     
     //MARK: - Initializers
-    init(localDataManager: MoviesLocalRepo, remoteDataManager: MoviesRemoteRepo) {
+    init(localDataManager: MoviesLocalRepo) {
         self.localDataManager = localDataManager
     }
     
