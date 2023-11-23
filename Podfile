@@ -6,7 +6,7 @@ target 'Systems-Orange Assignment' do
   use_frameworks!
 
 pod 'IQKeyboardManager'
-pod 'Alamofire'
+#pod 'Alamofire'
 pod "ESPullToRefresh"
 pod 'Kingfisher', '~> 4.0'
 pod 'ProgressHUD'

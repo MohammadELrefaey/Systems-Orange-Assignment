@@ -80,6 +80,11 @@ extension MovieDetailsViewController: MovieDetailsViewProtocol{
         photosCV.reloadData()
         photosCV.fitHeightToContent(view: self.view, heightConstraint: photosCollectionHeight)
     }
+    
+    func showNetworkError(message: String?) {
+        AppAlert.showError(message: message ?? "")
+    }
+    
 }
 
 

@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import CoreNetwork
 
 class MoviesRemoteDataManager: MoviesRemoteRepo {
-    var network: NetworkAdministration = NetworkAdministration()
+    var network: NetworkManager = NetworkManager()
 
     func fetchPhotos(request: MoviesInOut.GetPhotos.Request?, response: ((MoviesInOut.GetPhotos.Response?) -> ())?) {
         var requestModel = GetPhotoRequest()
@@ -20,30 +21,31 @@ class MoviesRemoteDataManager: MoviesRemoteRepo {
         requestModel.method = "flickr.photos.search"
         requestModel.api_key = ApiConstants.apiKey
         
-        let urlRequest = AlmofireRequest<GetPhotoRequest>(value: requestModel)
+        let urlRequest = NetworkRequest<GetPhotoRequest>(parameters: requestModel)
         urlRequest.path = URLs.photos
         urlRequest.method = .get
         
         var responseModel = MoviesInOut.GetPhotos.Response()
-        self.network.request(request: urlRequest)?.report({ result in
+        self.network.request(request: urlRequest) { result in
+
             switch result {
-               case .success(let data) :
+            case .success(let data) :
                 let parsedJson = data.convertTo(to: MoviesPhotosResponse.self)
                 responseModel.list = parsedJson?.photos?.photos
-
+                
                 break
-               case .failure(let error):
+            case .failure(let error):
                 let err = error as? NetworkError
                 responseModel.error = RError.init()
                 responseModel.error?.desc = err?.errorDescription
                 responseModel.error?.fullError = err
-                   break
-               case .none:
-                   break
-
-               }
+                break
+            case .none:
+                break
+                
+            }
             response?(responseModel)
-           })
+        }
     }
 
     

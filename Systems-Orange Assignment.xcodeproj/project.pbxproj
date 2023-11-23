@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		97392B85AA20DF45CFD48640 /* Pods_Systems_Orange_Assignment_Systems_Orange_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6996B05643B8CA208E00F897 /* Pods_Systems_Orange_Assignment_Systems_Orange_AssignmentUITests.framework */; };
 		C29445B5AEAEC5A792520AF3 /* Pods_Systems_Orange_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8DADB86461F2C1B581819F /* Pods_Systems_Orange_AssignmentTests.framework */; };
+		CB0F6F592B0B8087001940EA /* CoreNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = CB0F6F582B0B8087001940EA /* CoreNetwork */; };
+		CB0F6F5D2B0B8342001940EA /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0F6F5C2B0B8342001940EA /* ApiConstants.swift */; };
+		CB0F6F5F2B0B834B001940EA /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0F6F5E2B0B834B001940EA /* URLs.swift */; };
 		D336F210EEE3E8CD840426F6 /* Pods_Systems_Orange_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBBC63403CCD6E5072A5AB5 /* Pods_Systems_Orange_Assignment.framework */; };
 		F51F79B72AF403EA00B18F62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F79B62AF403EA00B18F62 /* AppDelegate.swift */; };
 		F51F79BB2AF403EA00B18F62 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51F79BA2AF403EA00B18F62 /* MoviesListViewController.swift */; };
@@ -66,19 +69,6 @@
 		F568E5FF2AF7DD4000D40C88 /* JsonMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568E5FE2AF7DD4000D40C88 /* JsonMapperTest.swift */; };
 		F568E6032AF7F49500D40C88 /* MoviesDetailsInteractorsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568E6022AF7F49500D40C88 /* MoviesDetailsInteractorsTest.swift */; };
 		F568E60B2AF826E200D40C88 /* MoviesListIneractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568E60A2AF826E200D40C88 /* MoviesListIneractorTest.swift */; };
-		F56A0D142AF8329500E40C30 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D052AF8329500E40C30 /* ApiConstants.swift */; };
-		F56A0D152AF8329500E40C30 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D062AF8329500E40C30 /* URLs.swift */; };
-		F56A0D162AF8329500E40C30 /* AlmofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D082AF8329500E40C30 /* AlmofireRequest.swift */; };
-		F56A0D172AF8329500E40C30 /* AlmofireResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D092AF8329500E40C30 /* AlmofireResponse.swift */; };
-		F56A0D182AF8329500E40C30 /* NetworkAdministration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D0A2AF8329500E40C30 /* NetworkAdministration.swift */; };
-		F56A0D192AF8329500E40C30 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D0C2AF8329500E40C30 /* Empty.swift */; };
-		F56A0D1A2AF8329500E40C30 /* RequestType.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D0D2AF8329500E40C30 /* RequestType.swift .swift */; };
-		F56A0D1B2AF8329500E40C30 /* String+ArabicNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D0E2AF8329500E40C30 /* String+ArabicNum.swift */; };
-		F56A0D1C2AF8329500E40C30 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D0F2AF8329500E40C30 /* RequestMethod.swift */; };
-		F56A0D1D2AF8329500E40C30 /* URL+QueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D102AF8329500E40C30 /* URL+QueryItem.swift */; };
-		F56A0D1E2AF8329500E40C30 /* Data+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D112AF8329500E40C30 /* Data+Converter.swift */; };
-		F56A0D1F2AF8329500E40C30 /* DictinaryPathValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D122AF8329500E40C30 /* DictinaryPathValue.swift */; };
-		F56A0D202AF8329500E40C30 /* NetworkError.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A0D132AF8329500E40C30 /* NetworkError.swift .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +98,8 @@
 		8C8DADB86461F2C1B581819F /* Pods_Systems_Orange_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Systems_Orange_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBBC63403CCD6E5072A5AB5 /* Pods_Systems_Orange_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Systems_Orange_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36E9359CC04766A5973B17F /* Pods-Systems-Orange AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Systems-Orange AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-Systems-Orange AssignmentTests/Pods-Systems-Orange AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB0F6F5C2B0B8342001940EA /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		CB0F6F5E2B0B834B001940EA /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		F51F79B32AF403EA00B18F62 /* Systems-Orange Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Systems-Orange Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51F79B62AF403EA00B18F62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F51F79BA2AF403EA00B18F62 /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
@@ -168,19 +160,6 @@
 		F568E5FE2AF7DD4000D40C88 /* JsonMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMapperTest.swift; sourceTree = "<group>"; };
 		F568E6022AF7F49500D40C88 /* MoviesDetailsInteractorsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsInteractorsTest.swift; sourceTree = "<group>"; };
 		F568E60A2AF826E200D40C88 /* MoviesListIneractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListIneractorTest.swift; sourceTree = "<group>"; };
-		F56A0D052AF8329500E40C30 /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
-		F56A0D062AF8329500E40C30 /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
-		F56A0D082AF8329500E40C30 /* AlmofireRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlmofireRequest.swift; sourceTree = "<group>"; };
-		F56A0D092AF8329500E40C30 /* AlmofireResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlmofireResponse.swift; sourceTree = "<group>"; };
-		F56A0D0A2AF8329500E40C30 /* NetworkAdministration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdministration.swift; sourceTree = "<group>"; };
-		F56A0D0C2AF8329500E40C30 /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
-		F56A0D0D2AF8329500E40C30 /* RequestType.swift .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RequestType.swift .swift"; sourceTree = "<group>"; };
-		F56A0D0E2AF8329500E40C30 /* String+ArabicNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ArabicNum.swift"; sourceTree = "<group>"; };
-		F56A0D0F2AF8329500E40C30 /* RequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
-		F56A0D102AF8329500E40C30 /* URL+QueryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+QueryItem.swift"; sourceTree = "<group>"; };
-		F56A0D112AF8329500E40C30 /* Data+Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Converter.swift"; sourceTree = "<group>"; };
-		F56A0D122AF8329500E40C30 /* DictinaryPathValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictinaryPathValue.swift; sourceTree = "<group>"; };
-		F56A0D132AF8329500E40C30 /* NetworkError.swift .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkError.swift .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0F6F592B0B8087001940EA /* CoreNetwork in Frameworks */,
 				D336F210EEE3E8CD840426F6 /* Pods_Systems_Orange_Assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +395,8 @@
 		F51F7A102AF5253900B18F62 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				F56A0D032AF8329500E40C30 /* Repo */,
+				CB0F6F5C2B0B8342001940EA /* ApiConstants.swift */,
+				CB0F6F5E2B0B834B001940EA /* URLs.swift */,
 				F51F7A112AF5253900B18F62 /* Extension */,
 				F51F7A332AF5253900B18F62 /* Utils */,
 			);
@@ -623,50 +604,6 @@
 			path = MovieList;
 			sourceTree = "<group>";
 		};
-		F56A0D032AF8329500E40C30 /* Repo */ = {
-			isa = PBXGroup;
-			children = (
-				F56A0D042AF8329500E40C30 /* Constatnt */,
-				F56A0D072AF8329500E40C30 /* Network */,
-				F56A0D0B2AF8329500E40C30 /* Helpers */,
-			);
-			path = Repo;
-			sourceTree = "<group>";
-		};
-		F56A0D042AF8329500E40C30 /* Constatnt */ = {
-			isa = PBXGroup;
-			children = (
-				F56A0D052AF8329500E40C30 /* ApiConstants.swift */,
-				F56A0D062AF8329500E40C30 /* URLs.swift */,
-			);
-			path = Constatnt;
-			sourceTree = "<group>";
-		};
-		F56A0D072AF8329500E40C30 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				F56A0D082AF8329500E40C30 /* AlmofireRequest.swift */,
-				F56A0D092AF8329500E40C30 /* AlmofireResponse.swift */,
-				F56A0D0A2AF8329500E40C30 /* NetworkAdministration.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		F56A0D0B2AF8329500E40C30 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				F56A0D0C2AF8329500E40C30 /* Empty.swift */,
-				F56A0D0D2AF8329500E40C30 /* RequestType.swift .swift */,
-				F56A0D0E2AF8329500E40C30 /* String+ArabicNum.swift */,
-				F56A0D0F2AF8329500E40C30 /* RequestMethod.swift */,
-				F56A0D102AF8329500E40C30 /* URL+QueryItem.swift */,
-				F56A0D112AF8329500E40C30 /* Data+Converter.swift */,
-				F56A0D122AF8329500E40C30 /* DictinaryPathValue.swift */,
-				F56A0D132AF8329500E40C30 /* NetworkError.swift .swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -685,6 +622,9 @@
 			dependencies = (
 			);
 			name = "Systems-Orange Assignment";
+			packageProductDependencies = (
+				CB0F6F582B0B8087001940EA /* CoreNetwork */,
+			);
 			productName = "Systems-Orange Assignment";
 			productReference = F51F79B32AF403EA00B18F62 /* Systems-Orange Assignment.app */;
 			productType = "com.apple.product-type.application";
@@ -761,6 +701,8 @@
 				ar,
 			);
 			mainGroup = F51F79AA2AF403EA00B18F62;
+			packageReferences = (
+			);
 			productRefGroup = F51F79B42AF403EA00B18F62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -911,7 +853,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F56A0D142AF8329500E40C30 /* ApiConstants.swift in Sources */,
+				CB0F6F5D2B0B8342001940EA /* ApiConstants.swift in Sources */,
 				F51F79F82AF48A8700B18F62 /* MoviesListInterfaces.swift in Sources */,
 				F51F79BB2AF403EA00B18F62 /* MoviesListViewController.swift in Sources */,
 				F51F7A062AF523C200B18F62 /* MoviesLocalDataManager.swift in Sources */,
@@ -921,52 +863,41 @@
 				F51F7B7B2AF6DCC600B18F62 /* MoviesPhotosResponse.swift in Sources */,
 				F51F7B792AF6D16800B18F62 /* MovieDetailsInterfaces.swift in Sources */,
 				F51F7B6A2AF6BE8E00B18F62 /* CustomTextField.swift in Sources */,
+				CB0F6F5F2B0B834B001940EA /* URLs.swift in Sources */,
 				F51F7B522AF66ECB00B18F62 /* MovieModel.swift in Sources */,
 				F568E5FC2AF7D81600D40C88 /* MappingError.swift in Sources */,
 				F51F7AA32AF5253900B18F62 /* CustomPullForScroll.swift in Sources */,
 				F51F7B762AF6D16800B18F62 /* MovieDetailsViewController.swift in Sources */,
 				F51F7ABE2AF5253900B18F62 /* AppGlobalStrings.swift in Sources */,
 				F568E5F92AF7D7AC00D40C88 /* JsonMapper.swift in Sources */,
-				F56A0D1C2AF8329500E40C30 /* RequestMethod.swift in Sources */,
 				F51F7B772AF6D16800B18F62 /* MovieDetailsPresenter.swift in Sources */,
 				F51F7A0E2AF524BD00B18F62 /* MoviesListRouter.swift in Sources */,
 				F51F7B7E2AF6DDF000B18F62 /* GetPhotoRequest.swift in Sources */,
-				F56A0D1E2AF8329500E40C30 /* Data+Converter.swift in Sources */,
 				F51F7A082AF523E100B18F62 /* MoviesRemoteRepo.swift in Sources */,
 				F51F7B782AF6D16800B18F62 /* MovieDetailsRouter.swift in Sources */,
 				F51F7B452AF5599A00B18F62 /* RError.swift in Sources */,
 				F51F7AAF2AF5253900B18F62 /* IQKeyboardBridge.swift in Sources */,
 				F51F7A0A2AF5244000B18F62 /* MoviesRemoteDataManager.swift in Sources */,
-				F56A0D162AF8329500E40C30 /* AlmofireRequest.swift in Sources */,
 				F51F7ABF2AF5253900B18F62 /* AppLoading.swift in Sources */,
 				F51F7B3E2AF54FA900B18F62 /* MoviesListPresenter.swift in Sources */,
-				F56A0D202AF8329500E40C30 /* NetworkError.swift .swift in Sources */,
 				F51F7A042AF523B300B18F62 /* MoviesLocalRepo.swift in Sources */,
 				F51F7AAA2AF5253900B18F62 /* KingfisherBridge.swift in Sources */,
-				F56A0D1D2AF8329500E40C30 /* URL+QueryItem.swift in Sources */,
-				F56A0D1F2AF8329500E40C30 /* DictinaryPathValue.swift in Sources */,
 				F51F7B422AF5582700B18F62 /* MoviesInOut.swift in Sources */,
-				F56A0D182AF8329500E40C30 /* NetworkAdministration.swift in Sources */,
 				F51F79B72AF403EA00B18F62 /* AppDelegate.swift in Sources */,
 				F51F7B5D2AF6B9C300B18F62 /* PageHeaderView.swift in Sources */,
 				F51F7B752AF6D16800B18F62 /* MovieDetailstInteractor.swift in Sources */,
 				F51F7B882AF6FE9500B18F62 /* UICollectionView+FitHeght.swift in Sources */,
 				F51F7B862AF6FC3300B18F62 /* UIViewImage+SetImage.swift in Sources */,
 				F568E5F62AF7A37000D40C88 /* MovieViewModel.swift in Sources */,
-				F56A0D152AF8329500E40C30 /* URLs.swift in Sources */,
 				F51F7AB72AF5253900B18F62 /* ESBridge.swift in Sources */,
-				F56A0D1B2AF8329500E40C30 /* String+ArabicNum.swift in Sources */,
 				F51F7A0C2AF5247A00B18F62 /* MoviesListInteractor.swift in Sources */,
 				F51F7B912AF70C2F00B18F62 /* ImageUrlConstructor.swift in Sources */,
 				F51F7AAC2AF5253900B18F62 /* ProgressHudBridge.swift in Sources */,
 				F568E5F12AF7345700D40C88 /* PhotoCell.swift in Sources */,
 				F51F7B4B2AF5919C00B18F62 /* BasePresenter.swift in Sources */,
 				F51F7B6D2AF6C47F00B18F62 /* UIView+Borders.swift in Sources */,
-				F56A0D172AF8329500E40C30 /* AlmofireResponse.swift in Sources */,
 				F51F7B542AF6B86600B18F62 /* CategoryModel.swift in Sources */,
 				F51F7B4C2AF5919C00B18F62 /* BaseViewProtocol.swift in Sources */,
-				F56A0D1A2AF8329500E40C30 /* RequestType.swift .swift in Sources */,
-				F56A0D192AF8329500E40C30 /* Empty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,6 +1094,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1192,6 +1124,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1325,6 +1258,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB0F6F582B0B8087001940EA /* CoreNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F51F79AB2AF403EA00B18F62 /* Project object */;
 }

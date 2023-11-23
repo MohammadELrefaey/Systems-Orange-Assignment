@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (5.8.0)
   - ESPullToRefresh (2.9.3)
   - IQKeyboardManager (6.5.12)
   - Kingfisher (4.10.1)
@@ -9,7 +8,6 @@ PODS:
   - SwiftMessages/App (9.0.6)
 
 DEPENDENCIES:
-  - Alamofire
   - ESPullToRefresh
   - IQKeyboardManager
   - Kingfisher (~> 4.0)
@@ -18,7 +16,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - ESPullToRefresh
     - IQKeyboardManager
     - Kingfisher
@@ -26,13 +23,12 @@ SPEC REPOS:
     - SwiftMessages
 
 SPEC CHECKSUMS:
-  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
   IQKeyboardManager: b1fd66ccf7a79095bdcc4a2735231586f744216e
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   ProgressHUD: 093d24ca970f191744017bee2649e37d0cd1c5b9
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
 
-PODFILE CHECKSUM: 751228eb673ebbca7a60775fbe6d0ee8b75b2ac7
+PODFILE CHECKSUM: bda4b7d37ae811b34a20bcac8951317f95e33db2
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.14.3
